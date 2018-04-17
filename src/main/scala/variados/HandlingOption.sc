@@ -9,11 +9,11 @@ def getMiddleName(value: Option[String]):String = {
   }
 }
 
-val martin = new Customer(first="Martin", last="Odersky")
+val martin = Customer(first="Martin", last="Odersky")
 
 getMiddleName(martin.middle)
 
-val customer = new Customer(first="Martin", Option("Middle"), "Odersky")
+val customer = Customer(first="Martin", Option("Middle"), "Odersky")
 
 getMiddleName(customer.middle)
 

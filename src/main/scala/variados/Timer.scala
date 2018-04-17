@@ -1,8 +1,10 @@
+package variados
+
 object Timer {
   def oncePerSecond(callback: () => Unit) {
-    var x = 0;
+    var x = 0
     while (x < 5) {
-      callback();
+      callback()
       Thread sleep 1000
       x += 1}
   }

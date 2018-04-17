@@ -27,7 +27,7 @@ def isCustomer(someValue : Any): Boolean = {
 
 isCustomer("")
 
-isCustomer(new Customer())
+isCustomer(Customer())
 
 val tuple = (1, "a", 2, "b")
 

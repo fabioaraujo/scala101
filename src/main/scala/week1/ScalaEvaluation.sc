@@ -8,6 +8,7 @@ test(7, 2 * 4)
 
 test(3 + 4, 2 * 4)
 
+//Exemplo pratico da diferença entre o callByValue e callByName
 def something() = {
   println("calling something")
   1 // return value
@@ -22,12 +23,14 @@ def callByName(x: => Int) = {
   println("x1=" + x)
   println("x2=" + x)
 }
-
+//Aqui a função something é chamada e passamos o seu resultado para o método
 callByValue(something())
-
+//Aqui a função something é passada como parâmetro e dentro do código será chamada duas vezes
 callByName(something())
 
 
+
+//Função que substitui a utilização do && em validações de boleanos
 def and(x: Boolean, y: => Boolean) = if (x) y /*return*/ else false /*return*/
 
 and(false, true)
@@ -41,24 +44,4 @@ val t: Boolean =
 //var loop: Boolean = loop
 
 //and(true, loop)
-
-def abs(x: Double) = if (x < 0) -x else x
-
-def sqrt(x: Double) = {
-  def sqrtIter(guess: Double): Double =
-    if (isGoodEnough(guess))
-      guess //return
-    else
-      sqrtIter(improve(guess)) //return
-
-  def isGoodEnough(guess: Double) = abs(guess * guess - x) / x < 0.001
-
-  def improve(guess: Double) = abs(guess + x / guess) / 2
-
-  sqrtIter(1.0)
-}
-
-sqrt(9)
-"Teste"
-sqrt(2e60)
 
