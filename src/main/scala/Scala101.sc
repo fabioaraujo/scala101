@@ -33,13 +33,14 @@ tuple._1
 
 (2 -> "b")
 
-(3 -> "b" -> 4)
+3 -> "b" -> 4
 
-val numeros = 1 to 6
+val numeros = 1 to 5
 val letras = 'a' to 'g'
 
 letras(2)
 
+println("numeros.zip(letras)")
 numeros.zip(letras)
 
 val map = Map (1 -> "a", 2 -> "b")
